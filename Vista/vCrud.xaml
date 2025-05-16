@@ -18,6 +18,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding id}" FontSize="20" />
                             <Label Text="{Binding nombre}" FontSize="20" />
                             <Label Text="{Binding apellido}" FontSize="20" />
                             <Label Text="{Binding edad}" FontSize="20" />

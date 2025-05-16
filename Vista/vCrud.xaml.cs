@@ -11,11 +11,13 @@ public partial class vCrud : ContentPage
     public vCrud()
 	{
 		InitializeComponent();
-	}
+		MostrarPersonas();
+    }
 	public async void MostrarPersonas()
     {
         var contenido = await client.GetStringAsync(url);
 		List<Persona> listaPersona = JsonConvert.DeserializeObject<List<Persona>>(contenido);
         _personaGrid = new ObservableCollection<Persona>(listaPersona);
+		listView.ItemsSource = _personaGrid;
     }
 }
