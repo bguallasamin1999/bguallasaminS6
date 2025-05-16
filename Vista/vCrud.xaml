@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bguallasaminS6.Vista.vCrud"
+             Title="vCrud">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20">
+        <Label Text="Tabla Grid"
+               TextColor="Black"
+               FontSize="20"></Label>
+
+        <ListView
+            x:Name="listView"
+            HasUnevenRows="True"
+            SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding nombre}" FontSize="20" />
+                            <Label Text="{Binding apellido}" FontSize="20" />
+                            <Label Text="{Binding edad}" FontSize="20" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
