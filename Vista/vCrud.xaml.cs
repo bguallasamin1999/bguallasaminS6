@@ -25,4 +25,10 @@ public partial class vCrud : ContentPage
     {
         Navigation.PushAsync(new vAgregar());
     }
+
+    private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        var objPersona = (Persona)e.SelectedItem;
+        Navigation.PushAsync(new vActEli(objPersona));
+    }
 }

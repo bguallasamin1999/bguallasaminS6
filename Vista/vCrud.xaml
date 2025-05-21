@@ -41,7 +41,8 @@
         <ListView
             x:Name="listView"
             HasUnevenRows="True"
-            SeparatorVisibility="Default">
+            SeparatorVisibility="Default"
+            ItemSelected="listView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

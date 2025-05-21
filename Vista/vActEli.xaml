@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bguallasaminS6.Vista.vActEli"
+             Title="vActEli">
+    <VerticalStackLayout Spacing="20"
+                         Padding="20">
+        <Label 
+            Text="Actualizar / Eliminar Persona"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+            x:Name="txtId"
+            IsEnabled="False"/>
+        <Entry x:Name="txtNombre"
+               Placeholder="Ingrese nombre"/>
+        <Entry x:Name="txtApellido"
+               Placeholder="Ingrese apellido"/>
+        <Entry x:Name="txtEdad"
+               Placeholder="Ingrese edad"
+               Keyboard="Numeric"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button 
+                x:Name="btnActualizar"
+                Text="Actualizar"
+                Clicked="btnActualizar_Clicked"
+                Grid.Column="0"
+                Grid.Row="0"/>
+            <Button x:Name="btnEliminar"
+                    Text="Eliminar"
+                    Clicked="btnEliminar_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

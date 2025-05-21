@@ -66,6 +66,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Vista\vActEli.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Vista\vAgregar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
