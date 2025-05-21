@@ -1,4 +1,5 @@
-﻿namespace bguallasaminS6
+﻿
+namespace bguallasaminS6
 {
     public partial class App : Application
     {
@@ -9,7 +10,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new Vista.vCrud());
+            return new Window(new NavigationPage(new Vista.vCrud()));
         }
     }
 }

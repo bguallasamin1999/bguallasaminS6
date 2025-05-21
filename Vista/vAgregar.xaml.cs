@@ -1,5 +1,4 @@
 using System.Net;
-using Android.Webkit;
 using bguallasaminS6.Modelo;
 
 namespace bguallasaminS6.Vista;

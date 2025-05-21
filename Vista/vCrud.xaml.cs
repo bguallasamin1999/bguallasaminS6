@@ -20,4 +20,9 @@ public partial class vCrud : ContentPage
         _personaGrid = new ObservableCollection<Persona>(listaPersona);
 		listView.ItemsSource = _personaGrid;
     }
+
+    private void btnAgregarPersona_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new vAgregar());
+    }
 }
