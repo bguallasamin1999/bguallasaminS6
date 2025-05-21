@@ -10,6 +10,34 @@
                TextColor="Black"
                FontSize="20"></Label>
 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"
+                       />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="id"
+           HorizontalOptions="Center"
+           Grid.Column="0"
+           Grid.Row="0"/>
+            <Label Text="nombre"
+           HorizontalOptions="Center"
+           Grid.Column="1"
+           Grid.Row="0"/>
+            <Label Text="apellido"
+           HorizontalOptions="Center"
+           Grid.Column="2"
+           Grid.Row="0"/>
+            <Label Text="edad"
+           HorizontalOptions="Center"
+           Grid.Column="3"
+           Grid.Row="0"/>
+        </Grid>
         <ListView
             x:Name="listView"
             HasUnevenRows="True"
@@ -17,11 +45,23 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="10">
-                            <Label Text="{Binding id}" FontSize="20" />
-                            <Label Text="{Binding nombre}" FontSize="20" />
-                            <Label Text="{Binding apellido}" FontSize="20" />
-                            <Label Text="{Binding edad}" FontSize="20" />
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding id}" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0"/>
+                                <Label Text="{Binding nombre}" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+                                <Label Text="{Binding apellido}" HorizontalOptions="Center" Grid.Column="2" Grid.Row="0"/>
+                                <Label Text="{Binding edad}" HorizontalOptions="Center" Grid.Column="3" Grid.Row="0"/>
+                            </Grid>
+
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
